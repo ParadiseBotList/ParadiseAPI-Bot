@@ -2,11 +2,11 @@ const { readdirSync } = require("fs");
 const { join } = require("path");
 const filePath = join(__dirname, "..", "events");
 
-module.exports.run = (paradise_api) => {
+module.exports.run = (client) => {
     const eventFiles = readdirSync(filePath);
     for(const eventFile of eventFiles) {
         const event = require(`${filePath}/${eventFile}`);
         const eventName = eventFile.split(".").shift();
-        paradise_api.on(eventName, event.bind(null, paradise_api));
+        client.on(eventName, event.bind(null, client));
     }
 }
