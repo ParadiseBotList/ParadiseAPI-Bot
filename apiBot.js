@@ -1,26 +1,26 @@
 const { Client, MessageEmbed, Collection } = require ('discord.js');
 const config = require ('./config/settings.js');
 
-const paradise_api = new Client({
+const client = new Client({
     disableMentions: 'everyone',
     disabledEvents: ['TYPING_START']
 });
 
-paradise_api.commands = new Collection();
-paradise_api.aliases = new Collection();
+client.commands = new Collection();
+client.aliases = new Collection();
 
-paradise_api.limits = new Map();
+client.limits = new Map();
 
-paradise_api.config = config;
+client.config = config;
 
-paradise_api.on('ready', () => {
+client.on('ready', () => {
     console.log('API Bot is Online and Ready to fetch info');
 });
 
 const command = require ('./structures/command');
-command.run(paradise_api);
+command.run(client);
 
 const events = require ('./structures/event');
-events.run(paradise_api);
+events.run(client);
 
-paradise_api.login(config.token);
+client.login(config.token);
