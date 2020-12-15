@@ -8,7 +8,7 @@ exports.token = process.env.TOKEN
  */
 exports.clientid = '788536521543122973'
 
-exports.embed_image = 'https://i.imgur.com/nlG1ehj.jpg'
+exports.embed_image = 'https://paradisebots.net/images/ParadiseAPILogo.png'
 
 exports.embed_color = '#6238fc'
 
