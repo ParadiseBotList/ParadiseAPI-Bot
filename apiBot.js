@@ -1,7 +1,7 @@
-const { Paradise, MessageEmbed, Collection } = require ('discord.js');
+const { Client, MessageEmbed, Collection } = require ('discord.js');
 const config = require ('./config/settings.js');
 
-const paradise_api = new Paradise({
+const paradise_api = new Client({
     disableMentions: 'everyone',
     disabledEvents: ['TYPING_START']
 });
