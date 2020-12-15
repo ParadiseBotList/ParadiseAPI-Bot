@@ -2,7 +2,7 @@ const ms = require('parse-ms');
 const { MessageEmbed } = require("discord.js");
 const ratetime = new Set()
 
-module.export = (paradise_api, message) => {
+module.export = (client, message) => {
 
     try {
 
@@ -11,7 +11,7 @@ module.export = (paradise_api, message) => {
     let pingMessage = new MessageEmbed()
         .setDescription('My prefix is `api.` || Example `api.help`');
 
-        if (message.content === `<@${paradise_api.user.id}>` || message.content === `<@!${paradise_api.user.id}>`) return message.channel.send(pingMessage);
+        if (message.content === `<@${client.user.id}>` || message.content === `<@!${client.user.id}>`) return message.channel.send(pingMessage);
 
     let prefix = 'api.';
 
@@ -19,7 +19,7 @@ module.export = (paradise_api, message) => {
 
     const commands = args.shift().slice(prefix.length).toLowerCase();
 
-    const cmd = paradise_api.commands.get(commands) || paradise_api.aliases.get(commands);
+    const cmd = client.commands.get(commands) || client.aliases.get(commands);
 
     if (!message.content.toLowerCase().startsWith(prefix)) return;
 
@@ -28,13 +28,13 @@ module.export = (paradise_api, message) => {
     if(!message.channel.permissionsFor(message.guild.me).toArray().includes('SEND_MESSAGES')) return;
 
     let devPerms = new MessageEmbed()
-      .setAuthor('(403) Forbidden', paradise_api.config.embed_image)
+      .setAuthor('(403) Forbidden', client.config.embed_image)
       .setDescription('Only my Developer can execute this command.')
-      .setColor(paradise_api.config.embed_color)
+      .setColor(client.config.embed_color)
       .setTimestamp()
-      .setFooter('LOL, Okay noob!!', paradise_api.config.embed_image)
+      .setFooter('LOL, Okay noob!!', client.config.embed_image)
 
-    if (cmd.requirements.ownerOnly && !paradise_api.config.owner.includes(message.author.id))
+    if (cmd.requirements.ownerOnly && !client.config.owner.includes(message.author.id))
       return message.channel.send(devPerms);
 
       if(cmd.limits) {
@@ -57,16 +57,16 @@ module.export = (paradise_api, message) => {
         }, cmd.limits.cooldown);
     }
 
-    let command_logs = paradise_api.guilds.cache.get(paradise_api.config.guildID).channels.cache.find(c => c.name === 'api-commands');
+    let command_logs = client.guilds.cache.get(client.config.guildID).channels.cache.find(c => c.name === 'api-commands');
 
     let commandLog = new MessageEmbed()
-      .setAuthor('Command Executed', paradise_api.config.embed_image)
+      .setAuthor('Command Executed', client.config.embed_image)
       .setDescription(`${message.author.username} Has executed a command`)
-      .setColor(paradise_api.config.embed_color)
+      .setColor(client.config.embed_color)
       .addField('Command', commands, true)
       .addField('Guild', message.guild.name, true)
       .setTimestamp()
-      .setFooter('Look at you go!', paradise_api.config.embed_image)
+      .setFooter('Look at you go!', client.config.embed_image)
 
     command_logs.send(commandLog)
 
@@ -75,12 +75,12 @@ module.export = (paradise_api, message) => {
 } catch (e) {
      
     let errorMessage = new MessageEmbed()
-        .setAuthor('(500) Internal Server Error', paradise_api.config.embed_image)
+        .setAuthor('(500) Internal Server Error', client.config.embed_image)
         .setDescription('An error occured while executing this command')
-        .setColor(paradise_api.config.embed_color)
+        .setColor(client.config.embed_color)
         .addField('Error Message', `${e.message}`)
         .setTimestamp()
-        .setFooter('Yikes! Is it bad?', paradise_api.config.embed_image)
+        .setFooter('Yikes! Is it bad?', client.config.embed_image)
 
     return message.channel.send(errorMessage);
   }
