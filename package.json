@@ -1,0 +1,36 @@
+{
+    "name": "paradiseapi-bot",
+    "version": "0.0.1",
+    "description": "A Simple Bot written in discord.js to interact with the Paradise API",
+    "main": "apiBot.js",
+    "engines": {
+      "node": "v12.16.3"
+    },
+    "scripts": {
+      "start": "node apiBot.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/ParadiseBotList/ParadiseAOPI-Bot.git"
+    },
+    "keywords": [
+      "discord.js",
+      "paradise api",
+      "api bot"
+    ],
+    "bugs": {
+      "url": "https://github.com/ParadiseBotList/ParadiseAPI-Bot/issues"
+    },
+    "homepage": "https://github.com/ParadiseBotList/ParadiseAPI-Bot#readme",
+    "author": "Toxic Dev",
+    "license": "ISC",
+    "dependencies": {
+      "discord.js": "^12.2.0",
+      "fs": "0.0.1-security",
+      "ms": "^2.1.2",
+      "node-fetch": "^2.6.0",
+      "parse-ms": "^2.1.0",
+      "paradiseapi.js": "^1.0.8"
+    }
+  }
