@@ -4,7 +4,7 @@ const filePath2 = join(__dirname, "..", "events");
 const eventFiles2 = readdirSync(filePath2);
 const timers = require("timers");
 
-module.exports = async (paradise_api) => {
+module.exports = async (client) => {
 
     let activities = [
         {
@@ -17,13 +17,13 @@ module.exports = async (paradise_api) => {
 
     let i = 0;
 
-    console.log(`Signed in as ${paradise_api.user.username} || Loaded [${eventFiles2.length}] events & [${paradise_api.commands.size}] commands`);
+    console.log(`Signed in as ${client.user.username} || Loaded [${eventFiles2.length}] events & [${client.commands.size}] commands`);
 
     timers.setInterval(() => {
         
         i = i == activities.length ? 0 : i;
 
-        paradise_api.user.setActivity(activities[i].name, activities[i].options);
+        client.user.setActivity(activities[i].name, activities[i].options);
 
         i++;
 
