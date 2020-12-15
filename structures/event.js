@@ -7,6 +7,6 @@ module.exports.run = (paradise_api) => {
     for(const eventFile of eventFiles) {
         const event = require(`${filePath}/${eventFile}`);
         const eventName = eventFile.split(".").shift();
-        client.on(eventName, event.bind(null, paradise_api));
+        paradise_api.on(eventName, event.bind(null, paradise_api));
     }
 }
