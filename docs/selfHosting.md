@@ -5,10 +5,10 @@ who are interested in Self Hosting a custom version of the bot.
 ---
 
 ###### Table of Contents  
-[Support](#support)  
-[Supported Versions](#supported-versions)
-[Host Provider(s)](#host-probider(s))
-[Setup Instructions](#setup)
+1. [Support](#support)  
+  2. [Supported Versions](#supported-versions)
+    3. [Host Provider(s)](#host-probider(s))
+      4. [Setup Instructions](#setup)
 
 
 ---
