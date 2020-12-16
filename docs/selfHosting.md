@@ -86,11 +86,11 @@ But you may also host the bot locally via your terminal/command console.
     7. Click "Deploy Branch"
     8. Wait for it to Deploy and then check the logs the bot should start.
 
-  2. __**Local Host**__
-    * Open Command Prompt or Terminal in your Prinects Directory
-    * Run `npm install` and wait for it to finish
-    * Run `node apiBot.js`
-    * Success watch the logs
+  * __**Local Host**__
+    1. Open Command Prompt or Terminal in your Prinects Directory
+    2. Run `npm install` and wait for it to finish
+    3. Run `node apiBot.js`
+    4. Success watch the logs
 
 __**NOTE:**__
 * If you experience any bugs or issues running the bit please contact us at the links provided at the top of this page.
