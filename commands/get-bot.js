@@ -46,7 +46,7 @@ module.exports.run = async (client, message, args) => {
             .addField('Support', bot_stats.server, true) 
             .addField('Website', bot_stats.website, true)
             .addField('GitHub', bot_stats.github, true)
-            .addField('Made with ❤ by', bot_stats.owner, true)
+            .addField('Made with ❤ by', `<@!${bot_stats.owner}>`, true)
             .setFooter(`Requested By: ${message.author.username }`, botAvatarURL)
 
         return message.channel.send(getEmbed)
