@@ -7,8 +7,8 @@
 
 ###### Arguements
 | Arg           | Description   | Required |
-| ------------- |:-------------:| -----:|
-| bot  | Mention of the bot to get info for | true  |
+| ------------- |:----------------------:| ------:|
+| bot           | Bot Mention (IE: @Bot) |  true  |
 
 
 ### Example / Screenshot
