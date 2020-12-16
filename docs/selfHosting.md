@@ -4,11 +4,24 @@ who are interested in Self Hosting a custom version of the bot.
 
 ---
 
+###### Table of Contents  
+[Support](#headers)  
+[Supported Versions](#emphasis)
+[Host Provider(s)]()
+[Setup Instructions]()
+
+
+---
+
+<a name="support"/>
 ## Support
 * [Bug Reports](https://github.com/ParadiseBotList/ParadiseAPI-Bot/issues)
 
 * [Discord Server](https://paradisebots.net/discord)
 
+---
+
+<a name="supported-versions"/>
 ### Supported Versions
 
 * Bot Versions
@@ -20,17 +33,17 @@ who are interested in Self Hosting a custom version of the bot.
 
 ---
 
+<a name="host-provider(s)"/>
 ## Host Provider(s)
 We personally use [Heroku](https://heroku.com/) which is a good (and free with 1000 hours/month) option
 But you may also host the bot locally via your terminal/command console.
 
 ---
 
+<a name="setup-instructions"/>
 ## Setup 
 
----
-
-## Config
+### Configuration
 * `config/settings.js`
   1. __**Heroku**__
     * Go to `config/settings.js`
