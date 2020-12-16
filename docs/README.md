@@ -1,1 +1,1 @@
-
+# Paradise API Bot Documentation
