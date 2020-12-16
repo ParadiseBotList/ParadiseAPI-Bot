@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) => {
 
     if (!bot_to_get || !bot_to_get.bot) return message.channel.send('Please provide a bot that is listed on our website to getch info about');
 
-    let verified_bot = await client.guilds.cache.get(client.config.guildID).users.cache.get(bot_to_get)
+    let verified_bot = await client.guilds.cache.get(client.config.guildID).users.cache.find(bot_to_get.id)
 
     if (!verified_bot) return message.channel.send('That bot doesnt exist in our Server or Database, Are you sure it has been added and approved?')
 
