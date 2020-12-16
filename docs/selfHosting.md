@@ -32,14 +32,14 @@ But you may also host the bot locally via your terminal/command console.
 
 ## Config
 * `config/settings.json`
-  1. Heroku
+  1. __**Heroku**__
     *
 
 * Process Environment `.env`
-  1. Heroku
+  1. __**Heroku**__
     *
 
-  2. Local Host
+  2. __**Local Host**__
     *
 
 ---
