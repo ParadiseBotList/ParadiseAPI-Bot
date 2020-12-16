@@ -37,6 +37,9 @@ But you may also host the bot locally via your terminal/command console.
     * Edit the file as Needed
     * Token is best stored in `.env` as a .env file can not be shared/uploaded or downloaded
 
+  2. __**Local Host**__
+    * Same steps as above ^
+
 * Process Environment `.env`
   1. __**Heroku**__
     *
