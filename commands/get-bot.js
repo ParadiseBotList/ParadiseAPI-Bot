@@ -43,10 +43,11 @@ module.exports.run = async (client, message, args) => {
             .addField('Server Count', bot_stats.servers, true)
             .addField('Shard Count', bot_stats.shards, true)
             .addField('Made With', bot_stats.library, true)
-            .addField('Support', bot_stats.server, true)
+            .addField('Support', bot_stats.server, true) 
             .addField('Website', bot_stats.website, true)
             .addField('GitHub', bot_stats.github, true)
-            .setFooter(`Made with ❤ by: <@!${bot_stats.owner}>`, botAvatarURL)
+            .addField('Made with ❤ by', bot_stats.owner, true)
+            .setFooter(`Requested By: ${message.author.username }`, botAvatarURL)
 
         return message.channel.send(getEmbed)
     })
