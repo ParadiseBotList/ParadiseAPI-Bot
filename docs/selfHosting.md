@@ -76,22 +76,15 @@ But you may also host the bot locally via your terminal/command console.
 ---
 
 ## Run the Bot
-  1. __**Heroku**__
-    * Upload your project to a Private GitHub
-
-    * Go to you Heroku Project Dashboard
-
-    * Navigate to Deploy settings
-
-    * Under Deployment Method select the GitHub Logo
-
-    * Link your GitHub account and the Repo you just made
-
-    * Click "enable automatic deploys"
-
-    * Click "Deploy Branch"
-
-    * Wait for it to Deploy and then check the logs the bot should start.
+  * __**Heroku**__
+    1. Upload your project to a Private GitHub
+    2. Go to you Heroku Project Dashboard
+    3. Navigate to Deploy settings
+    4. Under Deployment Method select the GitHub Logo
+    5. Link your GitHub account and the Repo you just made
+    6. Click "enable automatic deploys"
+    7. Click "Deploy Branch"
+    8. Wait for it to Deploy and then check the logs the bot should start.
 
   2. __**Local Host**__
     * Open Command Prompt or Terminal in your Prinects Directory
