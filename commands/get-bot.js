@@ -11,10 +11,6 @@ module.exports.run = async (client, message, args) => {
     try {
 
     message.delete().catch()
-        
-    let github = '';
-    let vanity = '';
-    let website = '';
 
     let bot_to_get = message.mentions.users.first();
 
