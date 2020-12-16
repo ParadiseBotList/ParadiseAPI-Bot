@@ -41,5 +41,4 @@ Discord Bot for interacting with the Paradise Bots API
 # Credits
 Made with ❤️️ by: 
 * Toxic Dev 
-& 
-* Paradise Bots
+* Paradise Bots LLC
