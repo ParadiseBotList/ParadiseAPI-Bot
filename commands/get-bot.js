@@ -12,13 +12,13 @@ module.exports.run = async (client, message, args) => {
 
     message.delete().catch()
 
-    let bot_to_get = message.mentions.users.first();
+    let bot = message.mentions.users.first();
 
-    if (!bot_to_get || !bot_to_get.bot) return message.channel.send('Please provide a bot that is listed on our website to getch info about');
+    if (!bot || !bot.bot) return message.channel.send('Please provide a bot that is listed on our website to getch info about');
 
-    let botAvatarURL = `https://cdn.discordapp.com/avatars/${bot_to_get}.id/${bot_to_get}.avatar`
+    let botAvatarURL = `https://cdn.discordapp.com/avatars/${bot}.id/${bot}.avatar`
 
-    stats.get(bot_to_get.id, function(bot_stats) {
+    stats.get(bot.id, function(bot_stats) {
 
         let ownersName = client.guilds.cache.get(client.config.guildID).users.cache.get(bot_stats.owner) ? client.guilds.cache.get(client.config.guildID).users.cache.get(bot_stats.owner).username : bot_stats.owner
 
