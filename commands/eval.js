@@ -24,10 +24,10 @@ module.exports.run = (client , message, args) => {
 
 module.exports.help = {
     name: "eval",
-    category: "owner",
+    category: "Owner",
     aliases: ['run'],
     description: "Evaluate code parts instead of open editor!",
-    example: "``eval <code>``"
+    example: "``api.eval <code>``"
 }
 
 module.exports.requirements = {
