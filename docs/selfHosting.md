@@ -7,7 +7,7 @@ who are interested in Self Hosting a custom version of the bot.
 ###### Table of Contents  
 * [Support](#support)
 * [Supported Versions](#supported-versions)
-* [Host Provider(s)](#host-probider(s))
+* [Host Provider(s)](#host-providers)
 * [Setup Instructions](#setup)
 * [Run the Bot](#run-the-bot)
 
@@ -36,7 +36,7 @@ who are interested in Self Hosting a custom version of the bot.
 
 ---
 
-<a name="host-provider(s)"/>
+<a name="host-providers"/>
 
 ## Host Provider(s)
 We personally use [Heroku](https://heroku.com/) which is a good (and free with 1000 hours/month) option
