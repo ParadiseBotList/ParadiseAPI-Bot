@@ -31,6 +31,6 @@
       "ms": "^2.1.2",
       "node-fetch": "^2.6.0",
       "parse-ms": "^2.1.0",
-      "paradiseapi.js": "^1.0.8"
+      "paradiseapi.js": "^1.10.0"
     }
   }
