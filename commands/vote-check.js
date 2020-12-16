@@ -16,13 +16,15 @@ module.exports.run = async (client, message, args) => {
 
     if (!bot || !user) return message.channel.send('Please ping some Users or Provide IDs, The Order should be `api.vote-check @Bot @User');
 
-    let userAvatarURL = `https://cdn.discordapp.com/avatars/${user_to_get.id}/${user_to_get.avatar}`
+    let userAvatarURL = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`
+    let botAvatarURL = `https://cdn.discordapp.com/avatars/${bot.id}/${bot.avatar}`
 
     stats.get(bot.id, function(vote_stats) {
     
         let voteStatus;
         
         let cachedUser = message.guild.members.cache.get(user.id);
+        let cachedBot = message.guild.members.cache.get(bot.id);
         
         if(vote_stats.usersVoted.includes(user.id)) {
            voteStatus = true;
@@ -35,7 +37,7 @@ module.exports.run = async (client, message, args) => {
             .setColor(client.config.embed_color)
             .addField('User ID', user.id)
             .addField('Has Voted', voteStatus, true)
-            .setFooter(`Requested By: ${message.author.username }`, userAvatarURL)
+            .setFooter(`Bot: ${cachedBot.username}`, botAvatarURL)
 
         return message.channel.send(getEmbed)
     })
