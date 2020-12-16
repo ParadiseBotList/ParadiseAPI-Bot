@@ -23,7 +23,7 @@ var milliseconds = parseInt((client.uptime % 1000) / 100),
             .addField('Uptime', `${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`, true)
             .addField('Ping', `${client.ws.ping}ms`, true)
             .addField('API Version', 'v1.10.0', true)
-            .addField('GitHub Link', 'Coming Soon', true)
+            .addField('GitHub Link', '[Click Me](https://github.com/ParadiseBotList/ParadiseAPI-Bot)', true)
             .addField('Website Link', 'Coming Soon', true)
             .setFooter(`Requested By: ${message.author.username }`, client.config.embed_image)
 
