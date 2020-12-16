@@ -25,6 +25,11 @@ module.exports = async (client) => {
 
     console.log(`Signed in as ${client.user.username} || Loaded [${eventFiles2.length}] events & [${client.commands.size}] commands`);
 
+    const PBL = require("paradiseapi.js")
+    const pbl = new PBL("788536521543122973", process.env.PARADISEAPI_TOKEN)
+     
+    pbl.post(client.guilds.cache.array().length, "1")
+
     timers.setInterval(() => {
         
         i = i == activities.length ? 0 : i;
