@@ -27,7 +27,7 @@ Discord Bot for interacting with the Paradise Bots API
 
 * api.get-user <@user> - Fetch some information from the Paradise Bots API about the provided user
 
-* api.vote-check <@Bot> <@User> - Check of the Provided user has voted for the Provided Bot
+* api.vote-check <@Bot> <@User> - Check if the Provided user has voted for the Provided Bot
 
 ---
 
