@@ -34,12 +34,15 @@ module.exports.run = async (client, message, args) => {
         }
 
         let getEmbed = new MessageEmbed()
-            .setAuthor(`Vote check for ${cachedUserName}`, client.config.embed_image)
+            .setAuthor(`Vote Check`, client.config.embed_image)
             .setColor(client.config.embed_color)
             .addField('User ID', user, true)
             .addField('User Mention', `<@!${user}>`, true)
+            .addField('Bot ID', vote_stats.botid, true)
+            .addField('Bot Mention', `<@!${bot}>`, true)
             .addField('Has Voted', voteStatus, true)
-            .setFooter(`Bot: ${vote_stats.username}`, client.config.embed_image)
+            .addField('Total Votes', `${vote_stats.username} has ${vote_stats.votes} Votes`, true)
+            .setFooter(`Requested By: ${message.author.username}`, client.config.embed_image)
 
         return message.channel.send(getEmbed)
     })
