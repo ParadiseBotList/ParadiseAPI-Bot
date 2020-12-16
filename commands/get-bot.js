@@ -66,9 +66,9 @@ module.exports.run = async (client, message, args) => {
 } 
 
 module.exports.help = {
-    name: "get",
+    name: "get-bot",
     category: "Paradise API",
-    aliases: ['get-stats', 'get-info'],
+    aliases: ['botinfo'],
     description: "Fetch some information from our API about the provided bot",
     example: "api.get <@Bot>"
 }
