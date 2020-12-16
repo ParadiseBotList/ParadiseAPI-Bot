@@ -12,6 +12,12 @@ module.exports = async (client) => {
             options: {
                 type: 'WATCHING',
             }
+        },
+        {
+            name: 'api.help',
+            options: {
+                type: 'PLAYING',
+            }
         }
     ];
 
