@@ -15,12 +15,13 @@ module.exports.run = async (client, message, args) => {
     const [bot, user] = message.mentions.users.keyArray();
         
     const cachedUser = message.guild.members.cache.get(user);
+    const cachedUserID = message.guild.members.cache.get(user).id;
+        
     const cachedBot = message.guild.members.cache.get(bot);
+        
+    const cachedUserName = message.guild.members.cache.get(user).username;
 
     if (!bot || !user) return message.channel.send('Please ping some Users or Provide IDs, The Order should be `api.vote-check @Bot @User');
-
-    let userAvatarURL = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`
-    let botAvatarURL = `https://cdn.discordapp.com/avatars/${bot.id}/${bot.avatar}`
 
     stats.get(bot, function(vote_stats) {
     
@@ -33,13 +34,13 @@ module.exports.run = async (client, message, args) => {
         }
 
         let getEmbed = new MessageEmbed()
-            .setAuthor(`${cachedUser.username} Vote Check`, userAvatarURL)
+            .setAuthor(`Vote check for ${cachedUserName}`, client.config.embed_image)
             .setColor(client.config.embed_color)
             .addField('User ID', user, true)
             .addField('Bot ID', vote_stats.botid, true)
             .addField('Has Voted', voteStatus, true)
             .addField('Votes', `${vote_stats.username} has a total of ${vote_stats.votes} Votes.`, true)
-            .setFooter(`Bot: ${vote_stats.username}`, botAvatarURL)
+            .setFooter(`Bot: ${vote_stats.username}`, client.config.embed_image)
 
         return message.channel.send(getEmbed)
     })
