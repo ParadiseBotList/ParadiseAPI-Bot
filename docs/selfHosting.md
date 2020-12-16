@@ -9,6 +9,15 @@ who are interested in Self Hosting a custom version of the bot.
 
 * [Discord Server](https://paradisebots.net/discord)
 
+### Supported Versions
+
+* Bot Versions
+- [x] v0.0.1
+
+* API Versions
+- [x] v1.10.0
+
+
 ---
 
 ## Host Provider(s)
