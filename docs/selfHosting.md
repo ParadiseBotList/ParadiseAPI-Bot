@@ -31,9 +31,11 @@ But you may also host the bot locally via your terminal/command console.
 ---
 
 ## Config
-* `config/settings.json`
+* `config/settings.js`
   1. __**Heroku**__
-    *
+    * Go to `config/settings.js`
+    * Edit the file as Needed
+    * Token is best stored in `.env` as a .env file can not be shared/uploaded or downloaded
 
 * Process Environment `.env`
   1. __**Heroku**__
