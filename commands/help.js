@@ -4,7 +4,8 @@ module.exports.run = async (client, message, args) => {
 
     let info_commands = [
         "``api.help`` - Displays this help message",
-        "``api.info`` - Displays some info about the bot."
+        "``api.info`` - Displays some info about the bot.",
+        "``api.vote-check`` - Check if a Provided User has voted for a Provided Bot"
     ]
 
     let api_commands = [
