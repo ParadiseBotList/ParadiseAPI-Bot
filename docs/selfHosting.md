@@ -5,11 +5,11 @@ who are interested in Self Hosting a custom version of the bot.
 ---
 
 ###### Table of Contents  
-1. [Support](#support)
-  2. [Supported Versions](#supported-versions)
-    3. [Host Provider(s)](#host-probider(s))
-  4. [Setup Instructions](#setup)
-5. [Run the Bot]()
+* [Support](#support)
+* [Supported Versions](#supported-versions)
+* [Host Provider(s)](#host-probider(s))
+* [Setup Instructions](#setup)
+* [Run the Bot]()
 
 
 ---
