@@ -7,4 +7,4 @@ A Basic bot made to help users Interact with and Fetch info from the Paradise Bo
     * [get-user](getUser.md)
 
  - Self Hosting
-  * [Guide](selfHosting.md)
+   * [Guide](selfHosting.md)
