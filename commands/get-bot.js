@@ -14,11 +14,9 @@ module.exports.run = async (client, message, args) => {
 
     let bot_to_get = message.mentions.users.first();
 
+    let the_bot = client.users.cache.get(bot_to_get);
+
     if (!bot_to_get || !bot_to_get.bot) return message.channel.send('Please provide a bot that is listed on our website to getch info about');
-
-    let verified_bot = await client.guilds.cache.get(client.config.guildID).users.cache.get(bot_to_get)
-
-    if (!verified_bot) return message.channel.send('That bot doesnt exist in our Server or Database, Are you sure it has been added and approved?')
 
     let botAvatarURL = `https://cdn.discordapp.com/avatars/${bot_to_get}.id/${bot_to_get}.avatar`
 
