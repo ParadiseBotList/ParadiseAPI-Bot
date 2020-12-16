@@ -20,7 +20,7 @@ module.exports.run = async (client, message, args) => {
 
     let botAvatarURL = `https://cdn.discordapp.com/avatars/${bot_to_get}.id/${bot_to_get}.avatar`
 
-    stats.get(verified_bot.id, function(bot_stats) {
+    stats.get(the_bot.id, function(bot_stats) {
 
         let ownersName = client.guilds.cache.get(client.config.guildID).users.cache.get(bot_stats.owner) ? client.guilds.cache.get(client.config.guildID).users.cache.get(bot_stats.owner).username : bot_stats.owner
 
