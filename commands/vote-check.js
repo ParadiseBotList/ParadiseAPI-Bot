@@ -54,11 +54,11 @@ module.exports.run = async (client, message, args) => {
 } 
 
 module.exports.help = {
-    name: "get-bot",
+    name: "vote-check",
     category: "Paradise API",
-    aliases: ['botinfo'],
-    description: "Fetch some information from our API about the provided bot",
-    example: "api.get-bot <@Bot>"
+    aliases: ['vc'],
+    description: "Check if the Provided User has Voted for the Provided Bot",
+    example: "api.vote-check <@Bot> <@User>"
 }
 
 module.exports.requirements = {
