@@ -22,12 +22,6 @@ module.exports.run = async (client, message, args) => {
 
     stats.get(bot_to_get.id, function(bot_stats) {
 
-        if (bot_stats.certifed === true) {
-            vanity = `https://paradisebots.net/bots/${bot_stats.vanityURL}`
-        } else {
-            vanity = 'Bot is not Certified!'
-        }
-
         let getEmbed = new MessageEmbed()
             .setAuthor(bot_stats.username, botAvatarURL)
             .setDescription(bot_stats.shortDescription)
@@ -35,10 +29,10 @@ module.exports.run = async (client, message, args) => {
             .addField('Bot ID', bot_stats.botid, true)
             .addField('Bot Prefix', bot_stats.prefix, true)
             .addField('Certified', bot_stats.certified, true)
-            .addField('Vanity URL', vanity, true)
-            .addField('Votes', `${bot_stats.votes} Votes`, true)
-            .addField('👍 Likes', `${bot_stats.likes} Likes`, true)
-            .addField('👎 Dislikes', `${bot_stats.dislikes} Dislikes`, true)
+            .addField('Vanity URL', bot_stats.vanityURL, true)
+            .addField('Votes', `${bot_stats.votes}`, true)
+            .addField('👍 Likes', `${bot_stats.likes}`, true)
+            .addField('👎 Dislikes', `${bot_stats.dislikes}`, true)
             .addField('Bot Tags', bot_stats.tags, true)
             .addField('Server Count', bot_stats.servers, true)
             .addField('Shard Count', bot_stats.shards, true)
