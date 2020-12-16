@@ -14,6 +14,8 @@ Discord Bot for interacting with the Paradise Bots API
 
 * Command Usage is Logged in our Support Server for debugging
 
+* This bot is Open-Source and free for anyone to use/modify
+
 ---
 
 ### Commands
