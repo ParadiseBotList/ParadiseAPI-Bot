@@ -8,3 +8,7 @@ A Basic bot made to help users Interact with and Fetch info from the Paradise Bo
 
  - Self Hosting
    * [Guide](selfHosting.md)
+
+### Links
+* [Support Server](https://paradisebots.net/discord)
+* ~[Website]()~
