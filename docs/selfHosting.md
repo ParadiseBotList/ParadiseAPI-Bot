@@ -78,12 +78,19 @@ But you may also host the bot locally via your terminal/command console.
 ## Run the Bot
   1. __**Heroku**__
     * Upload your project to a Private GitHub
+
     * Go to you Heroku Project Dashboard
+
     * Navigate to Deploy settings
+
     * Under Deployment Method select the GitHub Logo
+
     * Link your GitHub account and the Repo you just made
+
     * Click "enable automatic deploys"
+
     * Click "Deploy Branch"
+
     * Wait for it to Deploy and then check the logs the bot should start.
 
   2. __**Local Host**__
