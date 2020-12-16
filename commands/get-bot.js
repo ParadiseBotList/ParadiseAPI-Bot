@@ -22,7 +22,7 @@ module.exports.run = async (client, message, args) => {
 
     stats.get(bot_to_get.id, function(bot_stats) {
 
-        let ownersName = client.guilds.cache.get(client.config.guildID).users.cache.get(bot_stats.owner) ? client.guilds.cache.get(client.config.guildID).users.cache.get(bot_stats.owner).username : bot_stats.owner
+        let ownersName = this.client.guilds.cache.get(client.config.guildID).users.cache.get(bot_stats.owner) ? this.client.guilds.cache.get(client.config.guildID).users.cache.get(bot_stats.owner).username : bot_stats.owner
 
         if (bot_stats.certifed === true) {
             vanity = `https://paradisebots.net/bots/${bot_stats.vanityURL}`
@@ -48,7 +48,7 @@ module.exports.run = async (client, message, args) => {
             .addField('Support', bot_stats.server, true)
             .addField('Website', bot_stats.website, true)
             .addField('GitHub', bot_stats.github, true)
-            .setFooter(`Made with ❤ by: ${bot_stats.owner}`, botAvatarURL)
+            .setFooter(`Made with ❤ by: ${ownersName}`, botAvatarURL)
 
         return message.channel.send(getEmbed)
     })
