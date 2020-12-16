@@ -4,13 +4,13 @@ module.exports.run = async (client, message, args) => {
 
     let info_commands = [
         "``api.help`` - Displays this help message",
-        "``api.info`` - Displays some info about the bot.",
-        "``api.vote-check`` - Check if a Provided User has voted for a Provided Bot"
+        "``api.info`` - Displays some info about the bot."
     ]
 
     let api_commands = [
         "``api.get-bot`` - Get some information about a specified bot from our API",
-        "``api.get-user`` - Get some information about the specified user from our API"
+        "``api.get-user`` - Get some information about the specified user from our API",
+        "``api.vote-check`` - Check if a Provided User has voted for a Provided Bot"
     ]
 
     message.delete().catch()
