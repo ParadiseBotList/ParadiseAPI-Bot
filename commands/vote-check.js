@@ -35,8 +35,10 @@ module.exports.run = async (client, message, args) => {
         let getEmbed = new MessageEmbed()
             .setAuthor(`${cachedUser.username} Vote Check`, userAvatarURL)
             .setColor(client.config.embed_color)
-            .addField('User ID', user.id)
+            .addField('User ID', user.id, true)
+            .addField('Bot ID', bot.id, true)
             .addField('Has Voted', voteStatus, true)
+            .addField('Votes', `${cachedBot.username} has a total of ${vote_stats.votes} Votes.`, true)
             .setFooter(`Bot: ${cachedBot.username}`, botAvatarURL)
 
         return message.channel.send(getEmbed)
