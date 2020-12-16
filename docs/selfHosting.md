@@ -38,11 +38,14 @@ But you may also host the bot locally via your terminal/command console.
     * Token is best stored in `.env` as a .env file can not be shared/uploaded or downloaded
 
   2. __**Local Host**__
-    * Same steps as above ^
+    * Same steps as above ^ minus the token
 
 * Process Environment `.env`
   1. __**Heroku**__
-    *
+    * Go to your Heroku Project Dashboard Settings
+    * Under "Config Vars" click "Reveal Config Vars"
+    * Add a Var as shown below
+      ![Heroku Config Vars (.env)](https://media.discordapp.net/attachments/734686866690932767/788875658058793051/image0.png)
 
   2. __**Local Host**__
     *
