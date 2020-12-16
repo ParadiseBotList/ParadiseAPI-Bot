@@ -45,7 +45,7 @@ module.exports.help = {
     category: "Paradise API",
     aliases: ['userinfo'],
     description: "Fetch some information from our API about the provided user",
-    example: "api.get <@User>"
+    example: "api.get-user <@User>"
 }
 
 module.exports.requirements = {
