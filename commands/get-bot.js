@@ -30,7 +30,7 @@ module.exports.run = async (client, message, args) => {
             github = bot_stats.github
         }
         
-        if (bot_stats.vanityURL === none || bot_stats.certified === false) vanity = 'Bot is not Certified or has no Vanity set'
+        if (bot_stats.vanityURL === 'none' || bot_stats.certified === false) vanity = 'Bot is not Certified or has no Vanity set'
         
         if (bot_stats.website === 'https://paradisebots.net/') website = 'None'
 
