@@ -74,3 +74,23 @@ But you may also host the bot locally via your terminal/command console.
     * Save and Profit!
 
 ---
+
+## Run the Bot
+  1. __**Heroku**__
+    * Upload your project to a Private GitHub
+    * Go to you Heroku Project Dashboard
+    * Navigate to Deploy settings
+    * Under Deployment Method select the GitHub Logo
+    * Link your GitHub account and the Repo you just made
+    * Click "enable automatic deploys"
+    * Click "Deploy Branch"
+    * Wait for it to Deploy and then check the logs the bot should start.
+
+  2. __**Local Host**__
+    * Open Command Prompt or Terminal in your Prinects Directory
+    * Run `npm install` and wait for it to finish
+    * Run `node apiBot.js`
+    * Success watch the logs
+
+__**NOTE:**__
+* If you experience any bugs or issues running the bit please contact us at the links provided at the top of this page.
