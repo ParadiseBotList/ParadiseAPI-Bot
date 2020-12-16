@@ -14,8 +14,8 @@ module.exports.run = async (client, message, args) => {
     
     const [bot, user] = message.mentions.users.keyArray();
         
-    const cachedUser = message.guild.members.cache.get(user.id);
-    const cachedBot = message.guild.members.cache.get(bot.id);
+    const cachedUser = message.guild.members.cache.get(user);
+    const cachedBot = message.guild.members.cache.get(bot);
 
     if (!bot || !user) return message.channel.send('Please ping some Users or Provide IDs, The Order should be `api.vote-check @Bot @User');
 
@@ -26,7 +26,7 @@ module.exports.run = async (client, message, args) => {
     
         let voteStatus;
         
-        if(vote_stats.usersVoted.includes(user.id)) {
+        if(vote_stats.usersVoted.includes(user)) {
            voteStatus = true;
         } else {
            voteStatus = false;
@@ -35,7 +35,7 @@ module.exports.run = async (client, message, args) => {
         let getEmbed = new MessageEmbed()
             .setAuthor(`${cachedUser.username} Vote Check`, userAvatarURL)
             .setColor(client.config.embed_color)
-            .addField('User ID', cachedUser, true)
+            .addField('User ID', user, true)
             .addField('Bot ID', vote_stats.botid, true)
             .addField('Has Voted', voteStatus, true)
             .addField('Votes', `${vote_stats.username} has a total of ${vote_stats.votes} Votes.`, true)
