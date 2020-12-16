@@ -33,8 +33,7 @@ module.exports.help = {
 module.exports.requirements = {
     userPerms: [],
     clientPerms: ['EMBED_LINKS','SEND_MESSAGES'],
-    ownerOnly: false,
-    higherOnly: true
+    ownerOnly: true,
 }
 
 module.exports.limits = {
