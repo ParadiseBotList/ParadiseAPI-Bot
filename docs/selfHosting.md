@@ -9,7 +9,7 @@ who are interested in Self Hosting a custom version of the bot.
 * [Supported Versions](#supported-versions)
 * [Host Provider(s)](#host-probider(s))
 * [Setup Instructions](#setup)
-* [Run the Bot]()
+* [Run the Bot](#run-the-bot)
 
 
 ---
@@ -74,6 +74,8 @@ But you may also host the bot locally via your terminal/command console.
     * Save and Profit!
 
 ---
+
+<a name="run-the-bot"/>
 
 ## Run the Bot
   * __**Heroku**__
