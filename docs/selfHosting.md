@@ -21,6 +21,8 @@ who are interested in Self Hosting a custom version of the bot.
 ---
 
 ## Host Provider(s)
+We personally use [Heroku](https://heroku.com/) which is a good (and free with 1000 hours/month) option
+You may also host the bot locally via your terminal/command console.
 
 ---
 
