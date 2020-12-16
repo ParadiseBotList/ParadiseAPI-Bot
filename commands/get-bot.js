@@ -70,7 +70,7 @@ module.exports.help = {
     category: "Paradise API",
     aliases: ['botinfo'],
     description: "Fetch some information from our API about the provided bot",
-    example: "api.get <@Bot>"
+    example: "api.get-bot <@Bot>"
 }
 
 module.exports.requirements = {
