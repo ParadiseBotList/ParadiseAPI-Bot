@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
 
     let api_commands = [
         "``api.get-bot`` - Get some information about a specified bot from our API",
-        "``api.get-user`` - Get some information about the specified user from our API
+        "``api.get-user`` - Get some information about the specified user from our API"
     ]
 
     message.delete().catch()
