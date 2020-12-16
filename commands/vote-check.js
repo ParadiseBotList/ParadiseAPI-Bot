@@ -37,9 +37,8 @@ module.exports.run = async (client, message, args) => {
             .setAuthor(`Vote check for ${cachedUserName}`, client.config.embed_image)
             .setColor(client.config.embed_color)
             .addField('User ID', user, true)
-            .addField('Bot ID', vote_stats.botid, true)
+            .addField('User Mention', `<@!${user}>`, true)
             .addField('Has Voted', voteStatus, true)
-            .addField('Votes', `${vote_stats.username} has a total of ${vote_stats.votes} Votes.`, true)
             .setFooter(`Bot: ${vote_stats.username}`, client.config.embed_image)
 
         return message.channel.send(getEmbed)
