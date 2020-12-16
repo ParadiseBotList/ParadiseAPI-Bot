@@ -11,14 +11,16 @@ module.exports.run = async (client, message, args) => {
     try {
 
     message.delete().catch()
+        
+    let vanity;
 
-    let bot = message.mentions.users.first();
+    let bot_to_get = message.mentions.users.first();
 
-    if (!bot || !bot.bot) return message.channel.send('Please provide a bot that is listed on our website to getch info about');
+    if (!bot_to_get || !bot_to_get.bot) return message.channel.send('Please provide a bot that is listed on our website to getch info about');
 
-    let botAvatarURL = `https://cdn.discordapp.com/avatars/${bot}.id/${bot}.avatar`
+    let botAvatarURL = `https://cdn.discordapp.com/avatars/${bot_to_get.id}/${bot_to_get.avatar}`
 
-    stats.get(bot.id, function(bot_stats) {
+    stats.get(bot_to_get.id, function(bot_stats) {
 
         let ownersName = client.guilds.cache.get(client.config.guildID).users.cache.get(bot_stats.owner) ? client.guilds.cache.get(client.config.guildID).users.cache.get(bot_stats.owner).username : bot_stats.owner
 
@@ -35,6 +37,7 @@ module.exports.run = async (client, message, args) => {
             .addField('Bot ID', bot_stats.botid, true)
             .addField('Bot Prefix', bot_stats.prefix, true)
             .addField('Certified', bot_stats.certified, true)
+            .addField('Vanity URL', vanity, true)
             .addField('Votes', `${bot_stats.votes} Votes`, true)
             .addField('👍 Likes', `${bot_stats.likes} Likes`, true)
             .addField('👎 Dislikes', `${bot_stats.dislikes} Dislikes`, true)
@@ -45,7 +48,7 @@ module.exports.run = async (client, message, args) => {
             .addField('Support', bot_stats.server, true)
             .addField('Website', bot_stats.website, true)
             .addField('GitHub', bot_stats.github, true)
-            .setFooter(`Made with ❤ by: ${bot_stats.owner}`)
+            .setFooter(`Made with ❤ by: ${bot_stats.owner}`, botAvatarURL)
 
         return message.channel.send(getEmbed)
     })
