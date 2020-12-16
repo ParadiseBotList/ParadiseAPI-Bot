@@ -39,4 +39,7 @@ Discord Bot for interacting with the Paradise Bots API
 ---
 
 # Credits
-Made with ❤️️ by: Toxic Dev & Paradise Bots
+Made with ❤️️ by: 
+* Toxic Dev 
+& 
+* Paradise Bots
