@@ -23,16 +23,6 @@ module.exports.run = async (client, message, args) => {
     let botAvatarURL = `https://cdn.discordapp.com/avatars/${bot_to_get.id}/${bot_to_get.avatar}`
 
     stats.get(bot_to_get.id, function(bot_stats) {
-        
-        if (bot_stats.github.includes('IE:')) {
-            github = 'None'
-        } else {
-            github = bot_stats.github
-        }
-        
-        if (bot_stats.vanityURL === 'none' || bot_stats.certified === false) vanity = 'Bot is not Certified or has no Vanity set'
-        
-        if (bot_stats.website === 'https://paradisebots.net/') website = 'None'
 
         let getEmbed = new MessageEmbed()
             .setAuthor(bot_stats.username, botAvatarURL)
@@ -41,7 +31,7 @@ module.exports.run = async (client, message, args) => {
             .addField('Bot ID', bot_stats.botid, true)
             .addField('Bot Prefix', bot_stats.prefix, true)
             .addField('Certified', bot_stats.certified, true)
-            .addField('Vanity URL', vanity, true)
+            .addField('Vanity URL', bot_stats.vanityURL, true)
             .addField('Votes', `${bot_stats.votes}`, true)
             .addField('👍 Likes', `${bot_stats.likes}`, true)
             .addField('👎 Dislikes', `${bot_stats.dislikes}`, true)
@@ -51,7 +41,7 @@ module.exports.run = async (client, message, args) => {
             .addField('Made With', bot_stats.library, true)
             .addField('Support', bot_stats.server, true) 
             .addField('Website', bot_stats.website, true)
-            .addField('GitHub', github, true)
+            .addField('GitHub', bot_stats.github, true)
             .addField('Made with ❤ by', `<@!${bot_stats.owner}>`, true)
             .setFooter(`Requested By: ${message.author.username }`, botAvatarURL)
 
