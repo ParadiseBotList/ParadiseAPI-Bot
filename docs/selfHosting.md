@@ -4,11 +4,14 @@ who are interested in Self Hosting a custom version of the bot.
 
 ---
 
-## Installation
+## Support
+* [Bug Reports](https://github.com/ParadiseBotList/ParadiseAPI-Bot/issues)
+
+* [Discord Server](https://paradisebots.net/discord)
 
 ---
 
-## Configuration
+## Host Provider(s)
 
 ---
 
