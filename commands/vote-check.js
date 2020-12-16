@@ -13,18 +13,18 @@ module.exports.run = async (client, message, args) => {
     message.delete().catch()
     
     const [bot, user] = message.mentions.users.keyArray();
+        
+    const cachedUser = message.guild.members.cache.get(user);
+    const cachedBot = message.guild.members.cache.get(bot);
 
     if (!bot || !user) return message.channel.send('Please ping some Users or Provide IDs, The Order should be `api.vote-check @Bot @User');
 
     let userAvatarURL = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`
     let botAvatarURL = `https://cdn.discordapp.com/avatars/${bot.id}/${bot.avatar}`
 
-    stats.get(bot.id, function(vote_stats) {
+    stats.get(bot, function(vote_stats) {
     
         let voteStatus;
-        
-        let cachedUser = message.guild.members.cache.get(user.id);
-        let cachedBot = message.guild.members.cache.get(bot.id);
         
         if(vote_stats.usersVoted.includes(user.id)) {
            voteStatus = true;
