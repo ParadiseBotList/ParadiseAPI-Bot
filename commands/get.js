@@ -7,6 +7,8 @@ const PBL = require ('paradiseapi.js');
 const stats = new PBL();
 
 module.exports.run = async (client, message, args) => {
+    
+    try {
 
     message.delete().catch()
 
@@ -51,6 +53,18 @@ module.exports.run = async (client, message, args) => {
 
         return message.channel.send(getEmbed)
     })
+  } catch (e) {
+     
+    let errorMessage = new MessageEmbed()
+        .setAuthor('(500) Internal Server Error', client.config.embed_image)
+        .setDescription('An error occured while executing this command')
+        .setColor(client.config.embed_color)
+        .addField('Error Message', `${e.message}`)
+        .setTimestamp()
+        .setFooter('Yikes! Is it bad?', client.config.embed_image)
+
+    return message.channel.send(errorMessage);
+  }
 } 
 
 module.exports.help = {
