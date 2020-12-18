@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
         .setAuthor('Paradise API Invite', client.config.embed_image)
         .setDescription('Interested in using me in your server? Invite me here!!')
         .setColor(client.config.embed_color)
-        .addField('Invite Link', client.config.inviteLink)
+        .addField('Invite Link', `[Click Me](${client.config.inviteLink)`)
         .setTimestamp()
         .setFooter(`Currently In: ${client.guilds.cache.array().length} Servers`)
         
