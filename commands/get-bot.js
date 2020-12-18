@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
 
     let botAvatarURL = `https://cdn.discordapp.com/avatars/${bot_to_get.id}/${bot_to_get.avatar}`
 
-    stats.get(bot_to_get.id function(bot_stats) {
+    stats.get(bot_to_get.id, function(bot_stats) {
 
         let getEmbed = new MessageEmbed()
             .setAuthor(bot_stats.username, botAvatarURL)
