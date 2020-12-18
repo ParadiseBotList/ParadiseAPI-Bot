@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) => {
         
     let bot = message.mentions.users.first() || client.users.fetch(args[0])
 
-    let botAvatarURL = `https://cdn.discordapp.com/avatars/${bot_to_get.id}/${bot_to_get.avatar}`
+    let botAvatarURL = `https://cdn.discordapp.com/avatars/${bot.id}/${bot.avatar}`
 
     stats.get(bot.id, function(bot_stats) {
 
