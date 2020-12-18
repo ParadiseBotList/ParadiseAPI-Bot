@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
         
     if (!bot_to_get) bot_to_get = client.users.cache.get(args[0]);
 
-    if (!bot_to_get.bot) return message.channel.send('Please provide a bot that is listed on our website to getch info about');
+   // if (!bot_to_get.bot) return message.channel.send('Please provide a bot that is listed on our website to getch info about');
 
     let botAvatarURL = `https://cdn.discordapp.com/avatars/${bot_to_get.id}/${bot_to_get.avatar}`
 
