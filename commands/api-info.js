@@ -6,9 +6,7 @@ module.exports.run = async (client, message, args, config) => {
 
     try {
 
-        let send;
-
-        send = message.channel.send;
+        const send = message.channel.send;
         
         let api_link = '``paradisebots.net/api/v1``'
         let npm_module = 'https://www.npmjs.com/package/paradiseapi.js'
