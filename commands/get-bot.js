@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
 
     message.delete().catch()
 
-    let bot_to_get = message.mentions.users.first() || client.users.cache.get(args[0]);
+    let bot_to_get = message.mentions.users.first()
 
    // if (!bot_to_get.bot) return message.channel.send('Please provide a bot that is listed on our website to getch info about');
 
