@@ -13,6 +13,8 @@ module.exports.run = async (client, message, args) => {
         .addField('Invite Link', `[Click Me](${client.config.inviteLink})`)
         .setTimestamp()
         .setFooter(`Currently In: ${client.guilds.cache.array().length} Servers`)
+        
+        return message.channel.send(inviteEmbed)
 
     } catch (e) {
         let error = new MessageEmbed()
@@ -22,6 +24,8 @@ module.exports.run = async (client, message, args) => {
         .addField('Error', `${e.message}`)
         .setTimestamp()
         .setFooter('Yikes, Is it bad!', client.config.embed_image)
+        
+        return message.channel.send(error)
     }
 }
 
