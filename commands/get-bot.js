@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
 
     message.delete().catch()
         
-    let bot_to_get  = (message.mentions.users.first() || client.users.cache.get(args[0]));
+    let bot_to_get  = (client.users.cache.get(message.mentions.users.first()) || client.users.cache.get(args[0]));
 
     let botAvatarURL = `https://cdn.discordapp.com/avatars/${bot_to_get.id}/${bot_to_get.avatar}`
 
