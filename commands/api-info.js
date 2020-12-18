@@ -5,8 +5,6 @@ module.exports.run = async (client, message, args, config) => {
     message.delete().catch()
 
     try {
-
-        const send = message.channel.send;
         
         let api_link = '``paradisebots.net/api/v1``'
         let npm_module = 'https://www.npmjs.com/package/paradiseapi.js'
@@ -23,7 +21,7 @@ module.exports.run = async (client, message, args, config) => {
         .setTimestamp()
         .setFooter(`Requested By: ${message.author.username}`, client.config.embed_image)
 
-        return send(api_message);
+        return message.channel.send(api_message);
 
     } catch (e) {
         let error = new MessageEmbed()
@@ -33,7 +31,7 @@ module.exports.run = async (client, message, args, config) => {
         .setTimestamp()
         .setFooter('Yikes, Is it bad!?', client.config.embed_image)
 
-        return send(error);
+        return message.channel.send(error);
     }
 }
 
