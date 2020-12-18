@@ -12,11 +12,11 @@ module.exports.run = async (client, message, args) => {
 
     message.delete().catch()
         
-    let bot = client.users.fetch(args[0]);
+    let bot = message.mentions.users.first() || client.users.fetch(args[0])
 
     let botAvatarURL = `https://cdn.discordapp.com/avatars/${bot_to_get.id}/${bot_to_get.avatar}`
 
-    stats.get(bot_to_get.id, function(bot_stats) {
+    stats.get(bot.id, function(bot_stats) {
 
         let getEmbed = new MessageEmbed()
             .setAuthor(bot_stats.username, botAvatarURL)
