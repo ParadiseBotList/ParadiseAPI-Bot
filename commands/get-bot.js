@@ -12,7 +12,8 @@ module.exports.run = async (client, message, args) => {
 
     message.delete().catch()
         
-    let bot = message.mentions.users.first() || client.users.fetch(args[0])
+    //let bot = message.mentions.users.first() || client.users.fetch(args[0])
+    let bot = client.users.cache.get(args[0])
 
     let botAvatarURL = `https://cdn.discordapp.com/avatars/${bot.id}/${bot.avatar}`
 
