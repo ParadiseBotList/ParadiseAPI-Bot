@@ -5,8 +5,6 @@ const eventFiles2 = readdirSync(filePath2);
 const timers = require("timers");
 const botPackage = require('../package.json');
 
-console.log(pjson.version);
-
 
 module.exports = async (client) => {
 
