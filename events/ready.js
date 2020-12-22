@@ -4,6 +4,7 @@ const filePath2 = join(__dirname, "..", "events");
 const eventFiles2 = readdirSync(filePath2);
 const timers = require("timers");
 const botPackage = require('../package.json');
+const { MessageEmbed } = require('discord.js');
 
 
 module.exports = async (client) => {
