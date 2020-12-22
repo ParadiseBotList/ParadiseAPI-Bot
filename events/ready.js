@@ -10,7 +10,7 @@ module.exports = async (client) => {
 
   const newVersion = '0.0.1';
 
-   Let changeLog = [
+   let changeLog = [
      "• Implemented this Ready System\n",
      "• Updated the bots Ready Event\n"
 ];
