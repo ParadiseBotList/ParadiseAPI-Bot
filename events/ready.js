@@ -3,7 +3,7 @@ const { join } = require("path")
 const filePath2 = join(__dirname, "..", "events");
 const eventFiles2 = readdirSync(filePath2);
 const timers = require("timers");
-const botPackage = require('./package.json');
+const botPackage = require('../package.json');
 
 console.log(pjson.version);
 
