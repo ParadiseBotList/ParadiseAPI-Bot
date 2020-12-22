@@ -6,6 +6,8 @@ const timers = require("timers");
 
 module.exports = async (client) => {
 
+    let devServerUpdateChannel = await client.guilds.cache.get('783235521656782898').channels.cache.get('791048891101216768');
+
     let activities = [
         {
             name: 'https://paradisebots.net/api/v1',
@@ -36,7 +38,9 @@ module.exports = async (client) => {
 
         client.user.setActivity(activities[i].name, activities[i].options);
 
-        i++;
+        i++; 
 
     }, 30000);
+
+     devServerUpdateChannel.send("Online and Ready! | Version: `v0.0.1`");
 }
