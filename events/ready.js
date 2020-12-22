@@ -3,6 +3,10 @@ const { join } = require("path")
 const filePath2 = join(__dirname, "..", "events");
 const eventFiles2 = readdirSync(filePath2);
 const timers = require("timers");
+const botPackage = require('./package.json');
+
+console.log(pjson.version);
+
 
 module.exports = async (client) => {
 
@@ -42,5 +46,5 @@ module.exports = async (client) => {
 
     }, 30000);
 
-     devServerUpdateChannel.send("Online and Ready! | Version: `v0.0.1`");
+     devServerUpdateChannel.send(`Online and Ready to play with the API | Current Version: ${botPackage.version}`);
 }
