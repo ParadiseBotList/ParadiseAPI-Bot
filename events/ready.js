@@ -10,6 +10,7 @@ const { MessageEmbed } = require('discord.js');
 module.exports = async (client) => {
 
   const newVersion = '0.0.2';
+  const previousVersion = '0.0.1';
 
    let changeLog = [
      "• Implemented this Ready System.\n",
@@ -21,7 +22,7 @@ module.exports = async (client) => {
           .setDescription('Online and Ready to Play with the Paradise API.')
           .setColor(client.config.embed_color)
           .addField('Current Version', `v${botPackage.version}`, true)
-          .addField('Previous Version', 'Unavailable/Current', true)
+          .addField('Previous Version', `v${previousVersion}`, true)
           .setTimestamp()
 
       let changeLogMessage = new MessageEmbed()
