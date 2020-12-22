@@ -8,6 +8,30 @@ const botPackage = require('../package.json');
 
 module.exports = async (client) => {
 
+  const newVersion = '0.0.1';
+
+   Let changeLog = [
+     "• Implemented this Ready System\n",
+     "• Updated the bots Ready Event\n"
+];
+
+      let onlineMessage = new MessageEmbed()
+          .setAuthor('Boot Up Successful', client.config.embed_image)
+          .setDescription('Online and Ready to Play with the Paradise API.')
+          .setColor(client.config.embed_color)
+          .addField('Current Version', `v${botPackage.version}`, true)
+          .addField('Previous Version', 'Unavailable/Current', true)
+          .setTimestamp()
+
+      let changeLogMessage = new MessageEmbed()
+          .setAuthor('Boot Up Successful', client.config.embed_image)
+          .setDescription('Online and Ready to Play with the Paradise API.')
+          .setColor(client.config.embed_color)
+          .addField('Current Version', `v${newVersion}`, true)
+          .addField('Previous Version', `v${botPackage.version}`, true)
+          .addField('Change Log', `${changeLog}`, true)
+          .setTimestamp()
+
     let devServerUpdateChannel = await client.guilds.cache.get('783235521656782898').channels.cache.get('791048891101216768');
 
     let activities = [
@@ -44,5 +68,9 @@ module.exports = async (client) => {
 
     }, 30000);
 
-     devServerUpdateChannel.send(`Online and Ready to play with the API | Current Version: ${botPackage.version}`);
+     if (botPackage.version !== newVersion) { 
+         devServerUpdateChannel.send(changeLogMessage);
+     } else {
+         devServerUpdateChannel.send(onlineMessage);
+    } 
 }
