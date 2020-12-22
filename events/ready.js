@@ -9,11 +9,11 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = async (client) => {
 
-  const newVersion = '0.0.1';
+  const newVersion = '0.0.2';
 
    let changeLog = [
-     "• Implemented this Ready System\n",
-     "• Updated the bots Ready Event\n"
+     "• Implemented this Ready System.\n",
+     "• Updated the bots Ready Event.\n"
 ];
 
       let onlineMessage = new MessageEmbed()
